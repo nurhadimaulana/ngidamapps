@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: locations
+#
+#  id         :integer          not null, primary key
+#  address    :text
+#  user_id    :integer
+#  food_id    :integer
+#  latitude   :string
+#  longitude  :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyText
+  user_id: 1
+  food_id: 1
+  latitude: MyString
+  longitude: MyString
+
+two:
+  address: MyText
+  user_id: 1
+  food_id: 1
+  latitude: MyString
+  longitude: MyString
