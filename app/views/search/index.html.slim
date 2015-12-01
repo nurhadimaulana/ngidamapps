@@ -5,7 +5,7 @@
       .input-group
         span.input-group-addon
           i.fa.fa-search
-        input type="text" name="foodName" class="form-control" placeHolder="Masukkan kata kunci pencarian" ng-model="foodName" ng-class="{'has-error': formPencarian['foodName'].$invalid}" required="true"
+        input type="text" name="foodName" class="form-control" placeHolder="Masukkan kata kunci pencarian" ng-model="foodName" ng-keyup="search()" required="true"
       span class="help-block" ng-show="formPencarian['foodName'].$error.required" Wajib masukkan kata kunci
 
     hr
