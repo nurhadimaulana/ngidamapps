@@ -1,2 +1,2 @@
-collection @foods
-attributes :id, :name
+collection @locations
+attributes :id, :address

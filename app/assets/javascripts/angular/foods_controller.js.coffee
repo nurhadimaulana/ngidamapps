@@ -8,10 +8,12 @@ ngidamApp.controller "foodsController", ($scope, $http) ->
     $scope.errorMessage = ""
     $scope.locations = []
     $scope.searching = true
-    console.log $scope.foodName
     url = "http://localhost:3000/api/v1/foods/search?q=#{$scope.foodName}"
-    $http({method: "post", url: url})
+    # url = "https://api.github.com/users/nurhadimaulana/repos"
+    # $http({method: "post", url: url})
+    $http({method: "get", url: url})
       .success (data) ->
+        console.log data
         $scope.searching = false
         $scope.locations = data
       .error (data, status) ->

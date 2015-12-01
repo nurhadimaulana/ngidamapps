@@ -27,4 +27,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name, :gender, :address, presence: true
+  has_many :locations
 end

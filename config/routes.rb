@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       namespace :foods do
-        post :search
+        get :search
       end
     end
   end

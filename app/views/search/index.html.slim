@@ -1,11 +1,12 @@
 .row ng-controller="foodsController"
   .col-md-6
     h1 Pencarian
-    form ng-submit="search()"
+    form ng-submit="search()" name="formPencarian"
       .input-group
         span.input-group-addon
-          i.icon-search
-        input type="text" class="form-control" placeHolder="Masukkan kata kunci pencarian" ng-model="foodName"
+          i.fa.fa-search
+        input type="text" name="foodName" class="form-control" placeHolder="Masukkan kata kunci pencarian" ng-model="foodName" ng-class="{'has-error': formPencarian['foodName'].$invalid}" required="true"
+      span class="help-block" ng-show="formPencarian['foodName'].$error.required" Wajib masukkan kata kunci
 
     hr
 
@@ -17,7 +18,7 @@
     i.fa.fa-refresh.fa-spin ng-show="searching"
 
     ul.list-group
-      li.list-group-item ng-repeat="location in locations"
-        a href="{{location}}" target="blank"
-          h4.list-group-item-heading ng-bind="location.name"
-        p.list-group-item-text.text-muted ng-bind="location.name"
+      li.list-group-item ng-repeat="result in locations"
+        a href="#" target="blank"
+          h4.list-group-item-heading ng-bind="result.location.address"
+        p.list-group-item-text.text-muted ng-bind="result.location.address"
